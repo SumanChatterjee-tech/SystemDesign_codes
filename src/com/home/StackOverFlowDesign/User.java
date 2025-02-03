@@ -1,26 +1,26 @@
 package com.home.StackOverFlowDesign;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
-	int userId;
-	String name;
-	String email;
-	List<Question> questions;
-	List<Answer> answers;
-	List<Comment> comments;
-	int reupationScore;
+	private int userId;
+	private String name;
+	private String email;
+	private List<Question> questions;
+	private List<Answer> answers;
+	private List<Comment> comments;
+	private int reupationScore;
 	
-	public User(int userId, String name, String email, List<Question> questions, List<Answer> answers,
-			List<Comment> comments, int reupationScore) {
+	public User(int userId, String name, String email) {
 		super();
 		this.userId = userId;
 		this.name = name;
 		this.email = email;
-		this.questions = questions;
-		this.answers = answers;
-		this.comments = comments;
-		this.reupationScore = reupationScore;
+		this.questions = new ArrayList<>();
+		this.answers = new ArrayList<>();
+		this.comments = new ArrayList<>();
+		this.reupationScore = 0;
 	}
 
 	public int getUserId() {
